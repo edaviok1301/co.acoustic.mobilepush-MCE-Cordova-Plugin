@@ -1,0 +1,34 @@
+{
+    "name": "co.acoustic.mobilepush-MCE-Cordova-Plugin",
+    "version": "3.8.0",
+    "description": "Allows Cordova applications to integrate with Acoustic MCE Push Services",
+    "cordova": {
+        "id": "co.acoustic.mobile.push",
+        "platforms": [
+            "ios",
+            "android"
+        ]
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Acoustic-Mobile-Push/Cordova.git"
+    },
+    "keywords": [
+        "mce",
+        "ecosystem:cordova",
+        "cordova-ios",
+        "cordova-android"
+    ],
+    "engines": [{
+        "name": "cordova",
+        "version": ">=3.0"
+    }],
+    "author": "Acoustic MCE",
+    "license": "Apache 2.0 License",
+    "bugs": {
+        "url": "https://github.com/Acoustic-Mobile-Push/Cordova/issues"
+    },
+    "homepage": "https://github.com/Acoustic-Mobile-Push/Cordova#readme"
+}
