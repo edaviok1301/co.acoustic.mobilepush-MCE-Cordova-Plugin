@@ -19,6 +19,7 @@ version="3.8.0">
     </engines>
     <js-module src="www/MCEPlugin.js" name="MCEPlugin">
         <clobbers target="MCEPlugin" />
+	<clobbers target="AcousticSdkPush" />
     </js-module>
 
     <preference name="CHANNEL_NAME" default="MCE SDK Notification Channel" />
