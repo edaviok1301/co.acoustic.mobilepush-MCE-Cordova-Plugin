@@ -175,7 +175,7 @@ version="3.8.0">
             </feature>
         </config-file>
         <!--<source-file src="src/android/gson-2.2.4.jar" target-dir="libs" framework="false" />-->
-	<framework src="com.google.code.gson:gson:jar:2.2.4"/>
+	<framework src="com.google.code.gson:gson:2.2.4"/>
         
         <source-file src="src/android/acoustic-mobile-push-android-sdk-3.8.0.jar" target-dir="libs" framework="false" />
         <source-file src="src/android/acoustic-mobile-push-android-js-3.8.0.jar" target-dir="libs" framework="false" />
