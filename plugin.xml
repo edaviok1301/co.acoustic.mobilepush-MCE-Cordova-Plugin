@@ -17,7 +17,7 @@ version="3.8.0">
     <engines>
         <engine name="cordova" version=">=3.0" />
     </engines>
-    <js-module src="www/MCEPlugin.js" name="MCEPlugin">
+    <js-module src="MCEPlugin.js" name="MCEPlugin">
         <clobbers target="MCEPlugin" />
 	<clobbers target="AcousticSdkPush" />
     </js-module>
