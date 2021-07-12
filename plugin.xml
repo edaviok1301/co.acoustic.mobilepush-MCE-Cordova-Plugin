@@ -94,9 +94,9 @@ version="3.8.0">
             <uses-permission android:name="android.permission.VIBRATE" />
 
             <!--permissions for plugin cordova-plugin-geolocation -->
-            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-            <uses-feature android:name="android.hardware.location.gps" />
+            <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+            <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+            <!--<uses-feature android:name="android.hardware.location.gps" />-->
 
         </config-file>
         
