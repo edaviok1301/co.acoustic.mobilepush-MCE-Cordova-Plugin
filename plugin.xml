@@ -1,7 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- 
 Copyright © 2011, 2019 Acoustic, L.P. All rights reserved.
-
 NOTICE: This file contains material that is confidential and proprietary to 
 Acoustic, L.P. and/or other developers. No license is granted under any intellectual or 
 industrial property rights of Acoustic, L.P. except as may be provided in an agreement with 
@@ -19,7 +18,6 @@ version="3.8.0">
     </engines>
     <js-module src="MCEPlugin.js" name="MCEPlugin">
         <clobbers target="MCEPlugin" />
-	<clobbers target="AcousticSdkPush" />
     </js-module>
 
     <preference name="CHANNEL_NAME" default="MCE SDK Notification Channel" />
@@ -85,19 +83,13 @@ version="3.8.0">
         <config-file target="AndroidManifest.xml" parent="/manifest">
             
             <!-- INTERNET is required for calling the MCE server -->
-            <!--<uses-permission android:name="android.permission.INTERNET" />-->
+            <uses-permission android:name="android.permission.INTERNET" />
             <!-- WAKE_LOC is required for running scheduled tasks -->
-            <!--<uses-permission android:name="android.permission.WAKE_LOCK" />-->
+            <uses-permission android:name="android.permission.WAKE_LOCK" />
             <!-- RECEIVE_BOOT_COMPLETED is required for performing SDK task on device startup -->
             <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
             <!-- VIBRATE is required for notification configuration -->
             <uses-permission android:name="android.permission.VIBRATE" />
-
-            <!--permissions for plugin cordova-plugin-geolocation -->
-            <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
-            <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
-            <!--<uses-feature android:name="android.hardware.location.gps" />-->
-
         </config-file>
         
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
@@ -180,8 +172,7 @@ version="3.8.0">
                 <param name="android-package" value="co.acoustic.mobile.push.plugin.cordova.MceCordovaPlugin" />
             </feature>
         </config-file>
-        <!--<source-file src="src/android/gson-2.2.4.jar" target-dir="libs" framework="false" />-->
-	<framework src="com.google.code.gson:gson:2.2.4"/>
+        <source-file src="src/android/gson-2.2.4.jar" target-dir="libs" framework="false" />
         
         <source-file src="src/android/acoustic-mobile-push-android-sdk-3.8.0.jar" target-dir="libs" framework="false" />
         <source-file src="src/android/acoustic-mobile-push-android-js-3.8.0.jar" target-dir="libs" framework="false" />
