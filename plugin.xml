@@ -196,7 +196,7 @@ version="3.8.0">
         <!--FCM-->
         <framework src="com.google.firebase:firebase-core:+" />
 
-        <framework src="src/android/FCMPlugin.gradle" custom="true" type="gradleReference"/>
+        <!--<framework src="src/android/FCMPlugin.gradle" custom="true" type="gradleReference"/>-->
 
         <hook src="scripts/after_prepare.js" type="after_prepare" />
 
