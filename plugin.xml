@@ -84,10 +84,10 @@ version="3.8.0">
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
             
-            <!-- INTERNET is required for calling the MCE server -->
+            <!-- INTERNET is required for calling the MCE server --
             <uses-permission android:name="android.permission.INTERNET" />
-            <!-- WAKE_LOC is required for running scheduled tasks -->
-            <uses-permission android:name="android.permission.WAKE_LOCK" />
+            <!-- WAKE_LOC is required for running scheduled tasks --
+            <uses-permission android:name="android.permission.WAKE_LOCK" />-->
             <!-- RECEIVE_BOOT_COMPLETED is required for performing SDK task on device startup -->
             <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
             <!-- VIBRATE is required for notification configuration -->
