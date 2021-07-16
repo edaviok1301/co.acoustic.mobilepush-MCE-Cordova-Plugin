@@ -67,12 +67,9 @@ version="3.8.0">
         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
             <string>Be notified when interesting things are nearby</string>
         </config-file>
-        <!--<config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+        <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string>Be notified when interesting things are nearby</string>
-        </config-file>-->
-        <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
-            <string>Be notified when interesting things are nearby</string>
-        </edit-config>
+        </config-file>
     </platform>
     <platform name="android">
 
