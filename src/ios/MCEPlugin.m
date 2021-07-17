@@ -15,6 +15,7 @@
 #import "MCEEventCallbackQueue.h"
 
 @interface MCEPlugin ()
+@property CLLocationManager * locationManager;
 @property NSMutableDictionary * actionCallbacks;
 @property NSMutableDictionary * categoryCallbacks;
 @property MCEAttributesQueueManager * attributeQueue;
