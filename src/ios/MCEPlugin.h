@@ -9,6 +9,7 @@
  */
 
 #import <Cordova/CDVPlugin.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface MCEPlugin : CDVPlugin {
     
@@ -49,6 +50,7 @@
 - (void) unregisterActionCallback:(CDVInvokedUrlCommand*)command;
 - (void) setActionNotRegisteredCallback:(CDVInvokedUrlCommand*)command;
 - (void) setActionNotYetRegisteredCallback:(CDVInvokedUrlCommand*)command;
+
 
 @end
 

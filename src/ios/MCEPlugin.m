@@ -55,7 +55,8 @@
 
 -(void) manualInitialization:(CDVInvokedUrlCommand*)command
 {
-    [MCESdk.sharedInstance manualInitialization];    
+    [MCESdk.sharedInstance manualInitialization];  
+    self.locationManager = [[CLLocationManager alloc]init];  
 }
 
 - (void) phoneHome: (CDVInvokedUrlCommand*)command;
