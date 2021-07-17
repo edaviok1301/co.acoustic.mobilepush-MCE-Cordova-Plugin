@@ -6,6 +6,7 @@
  * industrial property rights of Acoustic, L.P. except as may be provided in an agreement with
  * Acoustic, L.P. Any unauthorized copying or distribution of content from this file is
  * prohibited.
+ * [self.locationManager requestWhenInUseAuthorization];
  */
 
 #import "MCEPlugin.h"
@@ -56,6 +57,7 @@
 -(void) manualInitialization:(CDVInvokedUrlCommand*)command
 {
     [MCESdk.sharedInstance manualInitialization];
+    [self.locationManager requestWhenInUseAuthorization];
 }
 
 - (void) phoneHome: (CDVInvokedUrlCommand*)command;
