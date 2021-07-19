@@ -58,6 +58,9 @@
 {
     [MCESdk.sharedInstance manualInitialization];  
     self.locationManager = [[CLLocationManager alloc]init];  
+    [self.locationManager  requestAlwaysAuthorization];
+    [self.locationManager requestWhenInUseAuthorization];
+
 }
 
 - (void) phoneHome: (CDVInvokedUrlCommand*)command;
