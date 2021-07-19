@@ -61,15 +61,15 @@ version="3.8.0">
             </array>
         </config-file>
 
-        <!--<config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription">
-            <string>Be notified when interesting things are nearby</string>
+        <config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription">
+            <string>We access your location to improve your experience</string>
         </config-file>
         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
-            <string>Be notified when interesting things are nearby</string>
+            <string>We access your location to improve your experience</string>
         </config-file>
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
-            <string>Be notified when interesting things are nearby</string>
-        </config-file>-->
+            <string>We access your location to improve your experience</string>
+        </config-file>
     </platform>
     <platform name="android">
 
