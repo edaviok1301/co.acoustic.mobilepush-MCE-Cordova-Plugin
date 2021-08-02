@@ -57,7 +57,7 @@ filestocopy.forEach(function(val) {
     var destdir = path.dirname(destfile);
     console.log("destdir:"+destdir);
     
-    if(!fs.existsSync(destdir)) {
+    if(!fs.existsSync(destdir.replace("www/images/inbox","www/images"))) {
         console.log("mkdir:" + destdir.replace("www/images/inbox","www/images"));       
         fs.mkdirSync(destdir.replace("www/images/inbox","www/images"));
     }
