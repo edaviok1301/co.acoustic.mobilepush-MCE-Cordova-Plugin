@@ -47,16 +47,19 @@ console.log("rootdir:"+rootdir);
 filestocopy.forEach(function(val) {
 	console.log("------------New CopyFile-------------");
 	console.log("val:"+val);
+
     var srcfile = path.join(rootdir, val);
     console.log("srcfile:"+srcfile);
+
     var destfile = path.join(process.env.PWD, "www", val);
     console.log("destfile:"+destfile);
+
     var destdir = path.dirname(destfile);
     console.log("destdir:"+destdir);
     
     if(!fs.existsSync(destdir)) {
-        console.log("mkdir:" + destdir);
-        fs.mkdirSync(destdir);
+        console.log("mkdir:" + destdir.replace("www/images/inbox","www/images"));       
+        fs.mkdirSync(destdir.replace("www/images/inbox","www/images"));
     }
     
     if (fs.existsSync(srcfile)) {
