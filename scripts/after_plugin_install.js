@@ -43,14 +43,17 @@ var fs = require('fs');
 var path = require('path');
  
 var rootdir = path.join(process.env.PWD, "plugins", "co.acoustic.mobile.push.plugin.inbox");
- 
+console.log("rootdir:"+rootdir);
 filestocopy.forEach(function(val) {
     var srcfile = path.join(rootdir, val);
+    console.log("srcfile:"+srcfile);
     var destfile = path.join(process.env.PWD, "www", val);
+    console.log("destfile:"+destfile);
     var destdir = path.dirname(destfile);
+    console.log("destdir:"+destdir);
     
     if(!fs.existsSync(destdir)) {
-        console.log("mkdir " + destdir);
+        console.log("mkdir:" + destdir);
         fs.mkdirSync(destdir);
     }
     
