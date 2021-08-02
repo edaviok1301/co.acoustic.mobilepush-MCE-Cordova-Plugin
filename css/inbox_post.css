@@ -1,0 +1,97 @@
+/*
+ * Copyright © 2016, 2019 Acoustic, L.P. All rights reserved.
+ *
+ * NOTICE: This file contains material that is confidential and proprietary to
+ * Acoustic, L.P. and/or other developers. No license is granted under any intellectual or
+ * industrial property rights of Acoustic, L.P. except as may be provided in an agreement with
+ * Acoustic, L.P. Any unauthorized copying or distribution of content from this file is
+ * prohibited.
+ */
+
+@media (prefers-color-scheme: dark) {
+.postInboxMessage .actions div a {
+ 	color: white;   
+}
+}
+
+/* Inbox Default Template Support */
+.postInboxMessage {
+    position: relative;
+}
+
+.postInboxMessage video {
+    margin-top: 5px;
+    width: 100%;
+}
+
+.postInboxMessage .postHeader {
+    position: relative;
+    height: 54px;
+}
+
+.postInboxMessage .headerImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 54px;
+    height: 54px;
+    margin-right: 5px;
+}
+
+.postInboxMessage .postHeader .title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    font-size: 20px;
+    overflow: hidden;
+    height: 26px;
+}
+
+.postInboxMessage .postHeader .subtitle {
+    position: absolute;
+    left: 0;
+    top: 26px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.postInboxMessage .contentImage {
+    margin-top: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100px;
+}
+
+#inboxMessages .postInboxMessage .contentText {
+    overflow:hidden;
+    max-height: 44px;
+}
+
+.postInboxMessage .actions {
+    display: -webkit-flex;
+    display: flex;
+    width:100%;
+    height: 44px;
+}
+
+.postInboxMessage .actions div {
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%;
+    text-align: center;
+    height: 44px;
+}
+
+.postInboxMessage .actions div a {
+    height: 44px;
+    line-height: 44px;
+    white-space: nowrap;
+}
+
+#inboxMessageContent .postInboxMessage
+{
+    padding: 5px;
+    padding-top: 10px;
+}

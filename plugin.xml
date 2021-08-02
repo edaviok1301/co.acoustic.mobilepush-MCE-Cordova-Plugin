@@ -20,6 +20,31 @@ version="3.8.0">
         <clobbers target="MCEPlugin" />
     </js-module>
 
+
+    <!--START INBOX PLUGIN-->
+    <js-module src="MCEInboxPlugin.js" name="MCEInboxPlugin">
+        <clobbers target="MCEInboxPlugin" />
+    </js-module>
+        
+    <js-module src="js/MCEInbox.js" name="MCEInbox">
+        <clobbers target="MCEInbox" />
+    </js-module>
+
+    <js-module src="js/MCEDefaultInbox.js" name="MCEDefaultInbox">
+        <clobbers target="MCEDefaultInbox" />
+    </js-module>
+
+    <js-module src="js/MCEPostInbox.js" name="MCEPostInbox">
+        <clobbers target="MCEPostInbox" />
+    </js-module>
+    
+    <js-module src="js/jquery.inview.js" name="jquery-inview">
+        <clobbers target="jquery-inview" />
+    </js-module>
+  
+    <hook type="after_plugin_install" src="scripts/after_plugin_install.js" />
+    <!--END INBOX PLUGIN-->
+
     <preference name="CHANNEL_NAME" default="MCE SDK Notification Channel" />
     <preference name="CHANNEL_DESCRIPTION" default="This is the notification channel for the MCE SDK sample application"/>
     <preference name="CHANNEL_ID" default="mce_sample_channel"/>
@@ -32,6 +57,9 @@ version="3.8.0">
     <preference name="AUTO_REINITIALIZE" default="true" />
     <preference name="AUTO_INITIALIZE" default="true" />
     <preference name="ANDROID_APPKEY" />
+
+
+    <!--- PLATFORM IOS -->
     <platform name="ios">
         <framework src="src/ios/AcousticMobilePush.framework" custom="true" embed="true" />
         <framework src="CoreTelephony.framework" />
@@ -70,7 +98,20 @@ version="3.8.0">
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string>We access your location to improve your experience</string>
         </config-file>
+
+        <!--START INBOX PLUGIN-->
+        <config-file target="config.xml" parent="/*">
+            <feature name="MCEInboxPlugin" >
+                <param name="ios-package" value="MCEInboxPlugin"/>
+            </feature>
+        </config-file> 
+        <header-file src="src/ios/MCEInboxPlugin.h" />
+        <source-file src="src/ios/MCEInboxPlugin.m" />
+        <!--END INBOX PLUGIN-->
     </platform>
+
+
+    <!--PLATFORM ANDROID-->
     <platform name="android">
 
         <framework src="com.google.android.gms:play-services-base:+" />
@@ -193,7 +234,7 @@ version="3.8.0">
         
 
 
-        <!--FCM-->
+        <!--START FCM-->
         <framework src="com.google.firebase:firebase-core:+" />
 
         <!--<framework src="src/android/FCMPlugin.gradle" custom="true" type="gradleReference"/>-->
@@ -203,6 +244,18 @@ version="3.8.0">
         <config-file target="res/values/strings.xml" parent="/*">
             <string name="senderid">241036433505</string>
         </config-file>
+        <!--END FCM-->
+
+        <!--START INBOX PLUGIN-->
+        <config-file target="res/xml/config.xml" parent="/widget">
+            <feature name="MCEInboxPlugin">
+                <param name="android-package" value="co.acoustic.mobile.push.plugin.cordova.inbox.MceCordovaInboxPlugin" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/acoustic-mobile-push-android-cordova-inbox-3.8.0.jar" target-dir="libs" framework="false" />
+        <source-file src="src/android/acoustic-mobile-push-android-js-inbox-3.8.0.jar" target-dir="libs" framework="false" />
+        <!--END INBOX PLUGIN-->
 
 
     </platform>
