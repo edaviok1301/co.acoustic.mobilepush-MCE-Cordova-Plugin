@@ -9,6 +9,7 @@
  */
 
 var filestocopy = [
+	/**InBox*/
 	"css/inbox_post.css",
 	"css/inbox_default.css",
 	"css/inbox.css",
@@ -36,7 +37,46 @@ var filestocopy = [
 	"images/inbox/trash-dark@3x.png",
 	"images/inbox/trash-light.png",
 	"images/inbox/trash-light@2x.png",
-	"images/inbox/trash-light@3x.png"
+	"images/inbox/trash-light@3x.png",
+
+
+	/**InAPP*/
+	"css/inapp_media.css",
+    "css/inapp_banner.css", 
+    "css/inapp_image.css", 
+    "css/inapp_video.css", 
+
+    "images/inApp/dismiss.png", 
+    "images/inApp/dismiss@2x.png", 
+    "images/inApp/dismiss@3x.png", 
+
+    "images/inApp/handle.png", 
+    "images/inApp/handle@2x.png", 
+    "images/inApp/handle@3x.png", 
+    
+    "images/inApp/cancel.png", 
+    "images/inApp/cancel@2x.png", 
+    "images/inApp/cancel@3x.png", 
+
+    "images/inApp/comment.png", 
+    "images/inApp/comment@2x.png", 
+    "images/inApp/comment@3x.png", 
+
+    "images/inApp/note.png", 
+    "images/inApp/note@2x.png", 
+    "images/inApp/note@3x.png", 
+
+    "images/inApp/notification.png", 
+    "images/inApp/notification@2x.png", 
+    "images/inApp/notification@3x.png", 
+
+    "images/inApp/offer.png", 
+    "images/inApp/offer@2x.png", 
+    "images/inApp/offer@3x.png", 
+
+    "images/inApp/store.png", 
+    "images/inApp/store@2x.png", 
+    "images/inApp/store@3x.png"
 ];
 
 var fs = require('fs');

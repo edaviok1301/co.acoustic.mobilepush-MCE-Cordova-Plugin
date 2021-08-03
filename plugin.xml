@@ -45,6 +45,31 @@ version="3.8.0">
     <hook type="after_plugin_install" src="scripts/after_plugin_install.js" />
     <!--END INBOX PLUGIN-->
 
+
+    <!--START INAPP PLUGIN-->
+    <js-module src="MCEInAppPlugin.js" name="MCEInAppPlugin">
+        <clobbers target="MCEInAppPlugin" />
+    </js-module>
+  
+    <js-module src="js/MCEInAppBanner.js" name="MCEInAppBanner">
+        <clobbers target="MCEInAppBanner" />
+    </js-module>
+
+    <js-module src="js/MCEInAppMedia.js" name="MCEInAppMedia">
+        <clobbers target="MCEInAppMedia" />
+    </js-module>
+
+    <js-module src="js/MCEInAppVideo.js" name="MCEInAppVideo">
+        <clobbers target="MCEInAppVideo" />
+    </js-module>
+
+    <js-module src="js/MCEInAppImage.js" name="MCEInAppImage">
+        <clobbers target="MCEInAppImage" />
+    </js-module>
+    <!--END INAPP PLUGIN-->
+
+
+
     <preference name="CHANNEL_NAME" default="MCE SDK Notification Channel" />
     <preference name="CHANNEL_DESCRIPTION" default="This is the notification channel for the MCE SDK sample application"/>
     <preference name="CHANNEL_ID" default="mce_sample_channel"/>
@@ -108,6 +133,17 @@ version="3.8.0">
         <header-file src="src/ios/MCEInboxPlugin.h" />
         <source-file src="src/ios/MCEInboxPlugin.m" />
         <!--END INBOX PLUGIN-->
+
+
+        <!--START INAPP PLUGIN-->
+        <config-file target="config.xml" parent="/*">
+            <feature name="MCEInAppPlugin" >
+                <param name="ios-package" value="MCEInAppPlugin"/>
+            </feature>
+        </config-file>    
+        <header-file src="src/ios/MCEInAppPlugin.h" />
+        <source-file src="src/ios/MCEInAppPlugin.m" />    
+        <!--END INAPP PLUGIN-->
     </platform>
 
 
@@ -258,5 +294,24 @@ version="3.8.0">
         <!--END INBOX PLUGIN-->
 
 
+        <!--START INAPP PLUGIN-->
+        <config-file target="res/xml/config.xml" parent="/widget">
+            <feature name="MCEInAppPlugin">
+                <param name="android-package" value="co.acoustic.mobile.push.plugin.cordova.inapp.MceCordovaInAppPlugin" />
+            </feature>
+        </config-file>
+   
+        <source-file src="src/android/acoustic-mobile-push-android-cordova-inapp-3.8.0.jar" target-dir="libs" framework="false" />
+        <source-file src="src/android/acoustic-mobile-push-android-js-inapp-3.8.0.jar" target-dir="libs" framework="false" />
+        <source-file src="src/android/acoustic-mobile-push-android-sdk-plugin-inapp-3.8.0.jar" target-dir="libs" framework="false" />
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <receiver android:name="co.acoustic.mobile.push.sdk.js.inapp.JsonMceBroadcastReceiver">
+              <intent-filter>
+                <action android:name="co.acoustic.mobile.push.sdk.NOTIFIER" />
+              </intent-filter>
+            </receiver>
+        </config-file>
+        <!--END INAPP PLUGIN-->
     </platform>
 </plugin>

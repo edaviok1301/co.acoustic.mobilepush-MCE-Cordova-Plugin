@@ -1,0 +1,70 @@
+/*
+ * Copyright © 2016, 2019 Acoustic, L.P. All rights reserved.
+ *
+ * NOTICE: This file contains material that is confidential and proprietary to
+ * Acoustic, L.P. and/or other developers. No license is granted under any intellectual or
+ * industrial property rights of Acoustic, L.P. except as may be provided in an agreement with
+ * Acoustic, L.P. Any unauthorized copying or distribution of content from this file is
+ * prohibited.
+ */
+
+.mediaInApp
+{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    text-shadow: none;
+    top:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.90);
+}
+
+.mediaInApp .handle
+{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    left: 0;
+    height: 14px;
+}
+.mediaInApp .handle img
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    display: block;
+}
+
+.mediaInApp .close
+{
+    position: absolute;
+    height: 44px;
+    width: 44px;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.mediaInApp .close img
+{
+    margin: 10px;
+    height: 24px;
+    width: 24px;
+}
+
+.mediaInApp .text
+{
+    position: absolute;
+    height: 64px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: gray;
+    max-height: 100%;
+}
+
+.mediaInApp .text div
+{
+    border-top: 1px solid gray;
+}
