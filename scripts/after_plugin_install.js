@@ -82,7 +82,7 @@ var filestocopy = [
 var fs = require('fs');
 var path = require('path');
  
-var rootdir = path.join(process.env.PWD, "plugins", "co.acoustic.mobile.push.plugin.inbox");
+var rootdir = path.join(process.env.PWD, "plugins", "co.acoustic.mobile.push.sdk");
 console.log("rootdir:"+rootdir);
 filestocopy.forEach(function(val) {
 	console.log("------------New CopyFile-------------");
