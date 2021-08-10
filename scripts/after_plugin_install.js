@@ -14,30 +14,30 @@ var filestocopy = [
 	"css/inbox_default.css",
 	"css/inbox.css",
 
-	"img/inbox/chevron-down-dark.png",
-	"img/inbox/chevron-down-dark@2x.png",
-	"img/inbox/chevron-down-dark@3x.png",
-	"img/inbox/chevron-down-light.png",
-	"img/inbox/chevron-down-light@2x.png",
-	"img/inbox/chevron-down-light@3x.png",
-	"img/inbox/chevron-up-dark.png",
-	"img/inbox/chevron-up-dark@2x.png",
-	"img/inbox/chevron-up-dark@3x.png",
-	"img/inbox/chevron-up-light.png",
-	"img/inbox/chevron-up-light@2x.png",
-	"img/inbox/chevron-up-light@3x.png",
-	"img/inbox/refresh-dark.png",
-	"img/inbox/refresh-dark@2x.png",
-	"img/inbox/refresh-dark@3x.png",
-	"img/inbox/refresh-light.png",
-	"img/inbox/refresh-light@2x.png",
-	"img/inbox/refresh-light@3x.png",
-	"img/inbox/trash-dark.png",
-	"img/inbox/trash-dark@2x.png",
-	"img/inbox/trash-dark@3x.png",
-	"img/inbox/trash-light.png",
-	"img/inbox/trash-light@2x.png",
-	"img/inbox/trash-light@3x.png",
+	"images/inbox/chevron-down-dark.png",
+	"images/inbox/chevron-down-dark@2x.png",
+	"images/inbox/chevron-down-dark@3x.png",
+	"images/inbox/chevron-down-light.png",
+	"images/inbox/chevron-down-light@2x.png",
+	"images/inbox/chevron-down-light@3x.png",
+	"images/inbox/chevron-up-dark.png",
+	"images/inbox/chevron-up-dark@2x.png",
+	"images/inbox/chevron-up-dark@3x.png",
+	"images/inbox/chevron-up-light.png",
+	"images/inbox/chevron-up-light@2x.png",
+	"images/inbox/chevron-up-light@3x.png",
+	"images/inbox/refresh-dark.png",
+	"images/inbox/refresh-dark@2x.png",
+	"images/inbox/refresh-dark@3x.png",
+	"images/inbox/refresh-light.png",
+	"images/inbox/refresh-light@2x.png",
+	"images/inbox/refresh-light@3x.png",
+	"images/inbox/trash-dark.png",
+	"images/inbox/trash-dark@2x.png",
+	"images/inbox/trash-dark@3x.png",
+	"images/inbox/trash-light.png",
+	"images/inbox/trash-light@2x.png",
+	"images/inbox/trash-light@3x.png",
 
 
 	/**InAPP*/
@@ -46,40 +46,40 @@ var filestocopy = [
     "css/inapp_image.css", 
     "css/inapp_video.css", 
 
-    "img/inApp/dismiss.png", 
-    "img/inApp/dismiss@2x.png", 
-    "img/inApp/dismiss@3x.png", 
+    "images/inApp/dismiss.png", 
+    "images/inApp/dismiss@2x.png", 
+    "images/inApp/dismiss@3x.png", 
 
-    "img/inApp/handle.png", 
-    "img/inApp/handle@2x.png", 
-    "img/inApp/handle@3x.png", 
+    "images/inApp/handle.png", 
+    "images/inApp/handle@2x.png", 
+    "images/inApp/handle@3x.png", 
     
-    "img/inApp/cancel.png", 
-    "img/inApp/cancel@2x.png", 
-    "img/inApp/cancel@3x.png", 
+    "images/inApp/cancel.png", 
+    "images/inApp/cancel@2x.png", 
+    "images/inApp/cancel@3x.png", 
 
-    "img/inApp/comment.png", 
-    "img/inApp/comment@2x.png", 
-    "img/inApp/comment@3x.png", 
+    "images/inApp/comment.png", 
+    "images/inApp/comment@2x.png", 
+    "images/inApp/comment@3x.png", 
 
-    "img/inApp/note.png", 
-    "img/inApp/note@2x.png", 
-    "img/inApp/note@3x.png", 
+    "images/inApp/note.png", 
+    "images/inApp/note@2x.png", 
+    "images/inApp/note@3x.png", 
 
-    "img/inApp/notification.png", 
-    "img/inApp/notification@2x.png", 
-    "img/inApp/notification@3x.png", 
+    "images/inApp/notification.png", 
+    "images/inApp/notification@2x.png", 
+    "images/inApp/notification@3x.png", 
 
-    "img/inApp/offer.png", 
-    "img/inApp/offer@2x.png", 
-    "img/inApp/offer@3x.png", 
+    "images/inApp/offer.png", 
+    "images/inApp/offer@2x.png", 
+    "images/inApp/offer@3x.png", 
 
-    "img/inApp/store.png", 
-    "img/inApp/store@2x.png", 
-    "img/inApp/store@3x.png"
+    "images/inApp/store.png", 
+    "images/inApp/store@2x.png", 
+    "images/inApp/store@3x.png"
 ];
 
-var img="";
+var images="";
 
 var fs = require('fs');
 var path = require('path');
@@ -87,16 +87,25 @@ var path = require('path');
 var rootdir = path.join(process.env.PWD, "plugins", "co.acoustic.mobile.push.sdk");
 console.log("rootdir:"+rootdir);
 
-img=path.join(process.env.PWD,"www","img","inApp");//ruta source/www/img/inApp
-if(!fs.existsSync(img)){
-    console.log("mkdir:" + img);       
-    fs.mkdirSync(img);
+images=path.join(process.env.PWD,"www","images");//ruta source/www/images/inApp
+if(!fs.existsSync(images)){
+    console.log("mkdir:" + images);       
+    fs.mkdirSync(images);
+    console.log("Create: "+images);
 }
 
-img=path.join(process.env.PWD,"www","img","inbox");//ruta source/www/img/inbox
-if(!fs.existsSync(img)){
-    console.log("mkdir:" + img);       
-    fs.mkdirSync(img);
+images=path.join(process.env.PWD,"www","images","inApp");//ruta source/www/images/inApp
+if(!fs.existsSync(images)){
+    console.log("mkdir:" + images);       
+    fs.mkdirSync(images);
+    console.log("Create: "+images);
+}
+
+images=path.join(process.env.PWD,"www","images","inbox");//ruta source/www/images/inbox
+if(!fs.existsSync(images)){
+    console.log("mkdir:" + images);       
+    fs.mkdirSync(images);
+    console.log("Create: "+images);
 }
 
 
