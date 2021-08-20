@@ -19,18 +19,19 @@ exports.hideMediaInApp = function() {
 exports.show = function(inAppMessage, completion) {
     MCEPlugin.safeAreaInsets(function(insets) {
         MCEInAppMedia.autoDismiss = true;
-        var close = MCEPlugin.bestImage("images/inApp/dismiss.png");
-        var handle = MCEPlugin.bestImage("images/inApp/handle.png");
+        var close = localStorage.getItem("CloseIcon");
+        //var handle = MCEPlugin.bestImage("images/inApp/handle.png");
 
         $('#inApp').remove();
 
         var closeElement = $("<div class='close'><img src='" + close + "'></div>");
         closeElement.css({ "top": insets.top });
-        var handleElement = $("<div class='handle'><img src='" + handle + "'></div>");
-        handleElement.css({ "top": insets.top });
+        //var handleElement = $("<div class='handle'><img src='" + handle + "'></div>");
+        //handleElement.css({ "top": insets.top });
         var textElement = $("<div class='text'><b>" + inAppMessage['content']['title'] + "</b><div>" + inAppMessage['content']['text'] + "</div>");
         inAppMediaElement = $("<div id='inApp' class='mediaInApp'></div>")
-        inAppMediaElement.append(closeElement).append(handleElement).append(textElement);
+        //inAppMediaElement.append(closeElement).append(handleElement).append(textElement);
+        inAppMediaElement.append(closeElement).append(textElement);
 
         $('body').append(inAppMediaElement);
 
