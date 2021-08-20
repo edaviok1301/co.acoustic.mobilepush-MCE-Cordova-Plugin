@@ -84,67 +84,6 @@ version="3.8.0">
     <preference name="ANDROID_APPKEY" />
 
 
-    <!--- PLATFORM IOS -->
-    <platform name="ios">
-        <framework src="src/ios/AcousticMobilePush.framework" custom="true" embed="true" />
-        <framework src="CoreTelephony.framework" />
-        <framework src="CoreLocation.framework" />
-        <framework src="libsqlite3.dylib" />
-        <header-file src="src/ios/AppDelegate+MCE.h" />
-        <source-file src="src/ios/AppDelegate+MCE.m" />
-        <header-file src="src/ios/MCEPlugin.h" />
-        <source-file src="src/ios/MCEPlugin.m" />
-        <header-file src="src/ios/MCEEventCallbackQueue.h" />
-        <source-file src="src/ios/MCEEventCallbackQueue.m" />
-        <config-file target="config.xml" parent="/*">
-            <feature name="MCEPlugin" >
-                <param name="ios-package" value="MCEPlugin"/>
-            </feature>
-            <preference name="baseUrl" value="$SERVER_URL" />
-            <preference name="prodAppKey" value="$IOS_PROD_APPKEY" />
-            <preference name="devAppKey" value="$IOS_DEV_APPKEY" />
-            <preference name="autoInitialize" value="$AUTO_INITIALIZE" />
-            <preference name="loglevel" value="$LOGLEVEL" />
-            <preference name="invalidateExistingUser" value="$INVALIDATE_EXISTING_USER" />
-            <preference name="autoReinitialize" value="$AUTO_REINITIALIZE" />
-        </config-file>
-        <config-file target="*-Info.plist" parent="UIBackgroundModes">
-            <array>
-                <string>remote-notification</string>
-            </array>
-        </config-file>
-
-        <config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription">
-            <string>We access your location to improve your experience</string>
-        </config-file>
-        <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
-            <string>We access your location to improve your experience</string>
-        </config-file>
-        <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
-            <string>We access your location to improve your experience</string>
-        </config-file>
-
-        <!--START INBOX PLUGIN-->
-        <config-file target="config.xml" parent="/*">
-            <feature name="MCEInboxPlugin" >
-                <param name="ios-package" value="MCEInboxPlugin"/>
-            </feature>
-        </config-file> 
-        <header-file src="src/ios/MCEInboxPlugin.h" />
-        <source-file src="src/ios/MCEInboxPlugin.m" />
-        <!--END INBOX PLUGIN-->
-
-
-        <!--START INAPP PLUGIN-->
-        <config-file target="config.xml" parent="/*">
-            <feature name="MCEInAppPlugin" >
-                <param name="ios-package" value="MCEInAppPlugin"/>
-            </feature>
-        </config-file>    
-        <header-file src="src/ios/MCEInAppPlugin.h" />
-        <source-file src="src/ios/MCEInAppPlugin.m" />    
-        <!--END INAPP PLUGIN-->
-    </platform>
 
 
     <!--PLATFORM ANDROID-->
