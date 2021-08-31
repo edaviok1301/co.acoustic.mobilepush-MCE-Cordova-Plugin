@@ -92,9 +92,13 @@ version="3.8.0">
         <framework src="com.google.android.gms:play-services-base:+" />
         <framework src="com.google.android.gms:play-services-auth:+" />
 
-    	<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="overwrite">
-            <application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="co.acoustic.mobile.push.sdk.js.MceJsonApplication" android:supportsRtl="true" />
+    	<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+            <application android:name="co.acoustic.mobile.push.sdk.js.MceJsonApplication"/>
         </edit-config>
+	    
+	<!--edit-config file="AndroidManifest.xml" target="/manifest/application" mode="overwrite">
+            <application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="co.acoustic.mobile.push.sdk.js.MceJsonApplication" android:supportsRtl="true" />
+        </edit-config-->	    
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
             
