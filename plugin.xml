@@ -182,8 +182,9 @@ version="3.8.0">
             <!--FCM PLugin-->
 
             <meta-data android:name="messagingService" android:value="fcm" />
-            <meta-data android:name="mceSenderId" android:value="1083061622885" />
-	           
+            <meta-data android:name="mceSenderId" android:value="241036433505" />
+		<!--D 241036433505-->
+	        <!--P 1083061622885-->
 
             <service android:name="co.acoustic.mobile.push.sdk.messaging.fcm.FcmMessagingService">
                 <intent-filter>
@@ -217,7 +218,7 @@ version="3.8.0">
         <hook src="scripts/after_prepare.js" type="after_prepare" />
 
         <config-file target="res/values/strings.xml" parent="/*">
-            <string name="senderid">1083061622885</string>
+            <string name="senderid">241036433505</string>
         </config-file>
         <!--END FCM-->
 
