@@ -75,7 +75,7 @@ version="3.8.0">
     <preference name="CHANNEL_ID" default="mce_sample_channel"/>
 
     <preference name="LOGLEVEL" default="error" />
-    <preference name="SERVER_URL" default="https://sdk.ibm.xtify.com" />
+    <preference name="SERVER_URL" default="mobile-sdk-lib-us-6.brilliantcollector.com" />
     <preference name="IOS_PROD_APPKEY" />
     <preference name="IOS_DEV_APPKEY" />
     <preference name="INVALIDATE_EXISTING_USER" default="false" />
