@@ -413,14 +413,10 @@ exports.manualInitialization = function() {
             alert("hola te pedimos el accesoa  tu ubicacion para ....");
         }
     }
+    function onFail (error) {
+        console.log(error);
+    }
 }
-
-function onFail (error) {
-    console.log(error);
-}
-       });
-}
-
 /**
 Console error reporting 
 @param message {string} Error message
