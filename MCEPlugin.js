@@ -406,7 +406,7 @@ autoInitialize=FALSE MceConfig.plist flag.
  */
 exports.manualInitialization = function() {
     cordova.exec(null, null, "MCEPlugin", "manualInitialization", []);
-    cordova.plugins.permissions.hasPermission("android.permission.ACCESS_FINE_LOCATION",onSuccess,onFail);
+    /*cordova.plugins.permissions.hasPermission("android.permission.ACCESS_FINE_LOCATION",onSuccess,onFail);
     function onSuccess (data) {
         console.log(data);
         if(data.hasPermission==false){
@@ -415,7 +415,7 @@ exports.manualInitialization = function() {
     }
     function onFail (error) {
         console.log(error);
-    }
+    }*/
 }
 /**
 Console error reporting 
