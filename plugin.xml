@@ -163,21 +163,21 @@ version="3.8.0">
                 android:authorities="$PACKAGE_NAME.MCE_JSON_PROVIDER"
                 android:exported="false" />
 
-            <service android:name="co.acoustic.mobile.push.sdk.session.SessionTrackingIntentService"/>
+            <service android:name="co.acoustic.mobile.push.sdk.session.SessionTrackingIntentService" android:exported="true" />
 
             <!-- EventsAlarmListener is required for event handling -->
-            <service android:name="co.acoustic.mobile.push.sdk.events.EventsAlarmListener" />
+            <service android:name="co.acoustic.mobile.push.sdk.events.EventsAlarmListener" android:exported="true" />
             <!-- PhoneHomeIntentService is required to allow the client to contact the server to update state -->
-            <service android:name="co.acoustic.mobile.push.sdk.registration.PhoneHomeIntentService" />
+            <service android:name="co.acoustic.mobile.push.sdk.registration.PhoneHomeIntentService" android:exported="true" />
             <!-- RegistrationIntentService is required for SDK registration -->
-            <service android:name="co.acoustic.mobile.push.sdk.registration.RegistrationIntentService" />
+            <service android:name="co.acoustic.mobile.push.sdk.registration.RegistrationIntentService" android:exported="true" />
             <!-- AttributesQueueConsumer is required for attributes handling -->
-            <service android:name="co.acoustic.mobile.push.sdk.attributes.AttributesQueueConsumer" />
+            <service android:name="co.acoustic.mobile.push.sdk.attributes.AttributesQueueConsumer" android:exported="true" />
 
             <!-- InboxUpdateService is optional. It is used for retrieving ibox updates from the MCE server. It is required only if inbox is used -->
-            <service android:name="co.acoustic.mobile.push.sdk.plugin.inbox.InboxUpdateService" />
+            <service android:name="co.acoustic.mobile.push.sdk.plugin.inbox.InboxUpdateService" android:exported="true" />
             <!-- MdeJobService is used for launching a job while the app is in the foreground. This is only used in Android O and above -->
-            <service android:name="co.acoustic.mobile.push.sdk.job.MceJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+            <service android:name="co.acoustic.mobile.push.sdk.job.MceJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true" />
 
             <!--FCM PLugin-->
 
@@ -186,7 +186,7 @@ version="3.8.0">
 		    <!--D 241036433505-->
 	        <!--P 1083061622885-->
 
-            <service android:name="co.acoustic.mobile.push.sdk.messaging.fcm.FcmMessagingService">
+            <service android:name="co.acoustic.mobile.push.sdk.messaging.fcm.FcmMessagingService" android:exported="true" >
                 <intent-filter>
                     <action android:name="com.google.firebase.MESSAGING_EVENT" />
                 </intent-filter>
