@@ -126,14 +126,14 @@ version="3.8.0">
             <meta-data android:name="invalidateExistingUser" android:value="$INVALIDATE_EXISTING_USER" />
             <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 
-            <receiver android:name="co.acoustic.mobile.push.sdk.js.JsonMceBroadcastReceiver">
+            <receiver android:name="co.acoustic.mobile.push.sdk.js.JsonMceBroadcastReceiver" android:exported="true">
               <intent-filter>
                 <action android:name="co.acoustic.mobile.push.sdk.NOTIFIER" />
               </intent-filter>
             </receiver>
 
             <!-- AlarmReceiver is required for SDK scheduled tasks and device status updates -->
-            <receiver android:name="co.acoustic.mobile.push.sdk.wi.AlarmReceiver" >
+            <receiver android:name="co.acoustic.mobile.push.sdk.wi.AlarmReceiver" android:exported="true" >
                 <intent-filter>
                     <action android:name="android.intent.action.BOOT_COMPLETED" />
                 </intent-filter>
@@ -151,7 +151,7 @@ version="3.8.0">
             </receiver>
 
             <!-- NotifActionReceiver is required for notification handling -->
-            <receiver android:name="co.acoustic.mobile.push.sdk.notification.NotifActionReceiver" />
+            <receiver android:name="co.acoustic.mobile.push.sdk.notification.NotifActionReceiver" android:exported="true"/>
             
             <!-- The provider is needed for the SDK database -->
             <provider
@@ -246,7 +246,7 @@ version="3.8.0">
         <source-file src="src/android/acoustic-mobile-push-android-sdk-plugin-inapp-3.8.0.jar" target-dir="libs" framework="false" />
         
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <receiver android:name="co.acoustic.mobile.push.sdk.js.inapp.JsonMceBroadcastReceiver">
+            <receiver android:name="co.acoustic.mobile.push.sdk.js.inapp.JsonMceBroadcastReceiver" android:exported="true">
               <intent-filter>
                 <action android:name="co.acoustic.mobile.push.sdk.NOTIFIER" />
               </intent-filter>
