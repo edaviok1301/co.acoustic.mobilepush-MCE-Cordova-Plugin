@@ -257,7 +257,7 @@ Acoustic, L.P. Any unauthorized copying or distribution of content from this fil
                 <param name="android-package" value="co.acoustic.mobile.push.plugin.cordova.MceCordovaPlugin" />
             </feature>
         </config-file>
-        <source-file src="src/android/gson-2.2.4.jar" target-dir="libs" framework="false" />
+        <!--<source-file src="src/android/gson-2.2.4.jar" target-dir="libs" framework="false" />-->
         <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
 
         <lib-file src="src/android/acoustic-mobile-push-android-sdk-3.8.5.aar" />
