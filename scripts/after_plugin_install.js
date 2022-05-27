@@ -100,6 +100,29 @@ var path = require('path');
 
 var rootdir = path.join(process.env.PWD, 'plugins', 'co.acoustic.mobile.push.plugin.inbox', 'assets');
 
+images=path.join(process.env.PWD,"assets","images");//ruta source/assets/images/inApp
+if(!fs.existsSync(images)){
+    console.log("mkdir:" + images);       
+    fs.mkdirSync(images);
+    console.log("Create: "+images);
+}
+
+images=path.join(process.env.PWD,"assets","images","inApp");//ruta source/assets/images/inApp
+if(!fs.existsSync(images)){
+    console.log("mkdir:" + images);       
+    fs.mkdirSync(images);
+    console.log("Create: "+images);
+}
+
+images=path.join(process.env.PWD,"assets","images","inbox");//ruta source/assets/images/inbox
+if(!fs.existsSync(images)){
+    console.log("mkdir:" + images);       
+    fs.mkdirSync(images);
+    console.log("Create: "+images);
+}
+
+
+
 filestocopy.forEach(function (val) {
   var srcfile = path.join(rootdir, val);
   var destfile = path.join(process.env.PWD, 'www', val);
