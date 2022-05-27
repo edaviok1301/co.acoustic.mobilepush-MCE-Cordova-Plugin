@@ -144,8 +144,8 @@ Acoustic, L.P. Any unauthorized copying or distribution of content from this fil
         <hook type="after_prepare" src="src/android/hooks/add_tools_namespace.js" />
         <hook type="after_prepare" src="src/android/hooks/after_prepare.js" />
 
-        <framework src="com.google.android.gms:play-services-base:+" />
-        <framework src="com.google.android.gms:play-services-auth:+" />
+        <!--<framework src="com.google.android.gms:play-services-base:+" />
+        <framework src="com.google.android.gms:play-services-auth:+" />-->
 
         <config-file target="config.xml" parent="/*">
             <preference name="AndroidXEnabled" value="true" />
@@ -301,7 +301,6 @@ Acoustic, L.P. Any unauthorized copying or distribution of content from this fil
             </feature>
         </config-file>
 
-        <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
         <source-file src="src/android/src/co/acoustic/mobile/push/plugin/cordova/inbox" target-dir="java/co/acoustic/mobile/push/plugin/cordova" />
         <source-file src="src/android/src/co/acoustic/mobile/push/sdk/js/inbox" target-dir="java/co/acoustic/mobile/push/sdk/js" />
         <lib-file src="src/android/acoustic-mobile-push-android-sdk-plugin-inbox-3.8.5.aar" />
