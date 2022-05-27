@@ -7,7 +7,8 @@ repositories{
 
 dependencies {
    implementation('androidx.appcompat:appcompat:1.1.0')
-   implementation(name:'acoustic-mobile-push-android-sdk-3.8.5', ext:'aar')
+   implementation(name:'acoustic-mobile-push-android-sdk-plugin-inbox-3.8.5', ext:'aar')
+   implementation(name:'acoustic-mobile-push-android-sdk-plugin-inapp-3.8.5', ext:'aar')
 }
 
 android {

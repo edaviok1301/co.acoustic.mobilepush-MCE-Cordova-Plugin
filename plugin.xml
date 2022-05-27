@@ -32,6 +32,53 @@ Acoustic, L.P. Any unauthorized copying or distribution of content from this fil
     <preference name="AUTO_REINITIALIZE" default="true" />
     <preference name="AUTO_INITIALIZE" default="true" />
     <preference name="ANDROID_APPKEY" />
+
+    <!--InApp-->
+    <js-module src="www/js/MCEInAppPlugin.js" name="MCEInAppPlugin">
+        <clobbers target="MCEInAppPlugin" />
+    </js-module>
+
+    <js-module src="www/js/MCEInAppBanner.js" name="MCEInAppBanner">
+        <clobbers target="MCEInAppBanner" />
+    </js-module>
+
+    <js-module src="www/js/MCEInAppMedia.js" name="MCEInAppMedia">
+        <clobbers target="MCEInAppMedia" />
+    </js-module>
+
+    <js-module src="www/js/MCEInAppVideo.js" name="MCEInAppVideo">
+        <clobbers target="MCEInAppVideo" />
+    </js-module>
+
+    <js-module src="www/js/MCEInAppImage.js" name="MCEInAppImage">
+        <clobbers target="MCEInAppImage" />
+    </js-module>
+
+
+
+    <!--Inbox-->
+    <js-module src="www/js/MCEInboxPlugin.js" name="MCEInboxPlugin">
+        <clobbers target="MCEInboxPlugin" />
+    </js-module>
+        
+    <js-module src="www/js/MCEInbox.js" name="MCEInbox">
+        <clobbers target="MCEInbox" />
+    </js-module>
+
+    <js-module src="www/js/MCEDefaultInbox.js" name="MCEDefaultInbox">
+        <clobbers target="MCEDefaultInbox" />
+    </js-module>
+
+    <js-module src="www/js/MCEPostInbox.js" name="MCEPostInbox">
+        <clobbers target="MCEPostInbox" />
+    </js-module>
+    
+    <js-module src="www/js/jquery.inview.js" name="jquery-inview">
+        <clobbers target="jquery-inview" />
+    </js-module>
+
+    <hook type="after_plugin_install" src="scripts/after_plugin_install.js" />
+
     <platform name="ios">
         <framework src="src/ios/AcousticMobilePush.xcframework" custom="true" embed="true" />
         <framework src="CoreTelephony.framework" />
@@ -70,7 +117,29 @@ Acoustic, L.P. Any unauthorized copying or distribution of content from this fil
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string>Be notified when interesting things are nearby</string>
         </config-file>
+
+    <!--InApp -->    
+    <config-file target="config.xml" parent="/*">
+            <feature name="MCEInAppPlugin" >
+                <param name="ios-package" value="MCEInAppPlugin"/>
+            </feature>
+        </config-file>    
+        <header-file src="src/ios/MCEInAppPlugin.h" />
+        <source-file src="src/ios/MCEInAppPlugin.m" />
+
+    <!--InBox-->
+    <config-file target="config.xml" parent="/*">
+        <feature name="MCEInboxPlugin" >
+            <param name="ios-package" value="MCEInboxPlugin"/>
+        </feature>
+    </config-file>    
+    <header-file src="src/ios/MCEInboxPlugin.h" />
+    <source-file src="src/ios/MCEInboxPlugin.m" />
+
     </platform>
+
+
+
     <platform name="android">
         <hook type="after_prepare" src="src/android/hooks/add_tools_namespace.js" />
         <hook type="after_prepare" src="src/android/hooks/after_prepare.js" />
@@ -205,5 +274,38 @@ Acoustic, L.P. Any unauthorized copying or distribution of content from this fil
         <source-file src="src/android/src/co/acoustic/mobile/push/sdk/js/MceJsonSdk.java" target-dir="java/co/acoustic/mobile/push/sdk/js" />
         <source-file src="src/android/src/co/acoustic/mobile/push/sdk/js/Provider.java" target-dir="java/co/acoustic/mobile/push/sdk/js" />
 
+
+        <!--InApp-->
+        <config-file target="res/xml/config.xml" parent="/widget">
+            <feature name="MCEInAppPlugin">
+                <param name="android-package" value="co.acoustic.mobile.push.plugin.cordova.inapp.MceCordovaInAppPlugin" />
+            </feature>
+        </config-file>
+   
+        <source-file src="src/android/src/co/acoustic/mobile/push/plugin/cordova/inapp" target-dir="java/co/acoustic/mobile/push/plugin/cordova" />
+        <source-file src="src/android/src/co/acoustic/mobile/push/sdk/js/inapp" target-dir="java/co/acoustic/mobile/push/sdk/js" />
+        <lib-file src="src/android/acoustic-mobile-push-android-sdk-plugin-inapp-3.8.5.aar" />
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <receiver android:name="co.acoustic.mobile.push.sdk.js.inapp.JsonMceBroadcastReceiver">
+              <intent-filter>
+                <action android:name="co.acoustic.mobile.push.sdk.NOTIFIER" />
+              </intent-filter>
+            </receiver>
+        </config-file>
+
+        <!--InBox-->
+        <config-file target="res/xml/config.xml" parent="/widget">
+            <feature name="MCEInboxPlugin">
+                <param name="android-package" value="co.acoustic.mobile.push.plugin.cordova.inbox.MceCordovaInboxPlugin" />
+            </feature>
+        </config-file>
+
+        <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
+        <source-file src="src/android/src/co/acoustic/mobile/push/plugin/cordova/inbox" target-dir="java/co/acoustic/mobile/push/plugin/cordova" />
+        <source-file src="src/android/src/co/acoustic/mobile/push/sdk/js/inbox" target-dir="java/co/acoustic/mobile/push/sdk/js" />
+        <lib-file src="src/android/acoustic-mobile-push-android-sdk-plugin-inbox-3.8.5.aar" />
+        <source-file src="src/android/assets/mce/plugins/inbox.json" target-dir="assets/mce/plugins" framework="false" />
+        
     </platform>
 </plugin>
