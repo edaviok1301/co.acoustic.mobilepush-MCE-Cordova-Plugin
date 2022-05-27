@@ -100,21 +100,21 @@ var path = require('path');
 
 var rootdir = path.join(process.env.PWD, 'plugins', 'co.acoustic.mobile.push.plugin.inbox', 'assets');
 
-images=path.join(process.env.PWD,"assets","images");//ruta source/assets/images/inApp
+images=path.join(process.env.PWD,"www","images");//ruta source/www/images/inApp
 if(!fs.existsSync(images)){
     console.log("mkdir:" + images);       
     fs.mkdirSync(images);
     console.log("Create: "+images);
 }
 
-images=path.join(process.env.PWD,"assets","images","inApp");//ruta source/assets/images/inApp
+images=path.join(process.env.PWD,"www","images","inApp");//ruta source/www/images/inApp
 if(!fs.existsSync(images)){
     console.log("mkdir:" + images);       
     fs.mkdirSync(images);
     console.log("Create: "+images);
 }
 
-images=path.join(process.env.PWD,"assets","images","inbox");//ruta source/assets/images/inbox
+images=path.join(process.env.PWD,"www","images","inbox");//ruta source/www/images/inbox
 if(!fs.existsSync(images)){
     console.log("mkdir:" + images);       
     fs.mkdirSync(images);
